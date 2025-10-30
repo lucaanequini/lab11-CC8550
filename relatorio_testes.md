@@ -58,10 +58,13 @@ Preencha com 20000 usuários e 50 de spawn rate
 ![Número de usuários](image-1.png)
 
 **Resultado do Teste de Estresse (Ponto de Quebra):**
-- **Ponto de Quebra Identificado:** (A ser preenchido após a execução do teste de estresse) (Meta: > 15.000 usuários)
-- **Análise:** O teste de estresse deve ser executado para identificar a capacidade máxima do sistema.
-- **Status do Teste de Estresse:** (Pendente)
+- **Ponto de Quebra Identificado:** ~4.500 usuários (Meta: > 15.000 usuários)
+- **Análise:** Conforme os gráficos, o sistema atingiu seu ponto de saturação com aproximadamente 4.500 usuários. A partir deste ponto, o tempo de resposta aumentou drasticamente e o throughput estagnou. Os dados finais do teste (com 20.000 usuários configurados) confirmam o estresse, mostrando um tempo de resposta altíssimo (95% dos usuários esperando 7.8 segundos) e um throughput máximo de 923 RPS. O resultado está muito abaixo da meta de 15.000 usuários.
+- **Status do Teste de Estresse:** **REPROVADO**
 
+![Requisições por segundo e response times(Ms)](image-2.png)
+![Número de usuários](image-3.png)
+<small>Considerar segunda parte do gráfico</small>
 
 ### 3. Teste de Escalabilidade (Simulado)
 - **Eficiência Calculada:** 86.36%
